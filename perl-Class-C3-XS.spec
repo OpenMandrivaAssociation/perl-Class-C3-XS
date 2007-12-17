@@ -12,7 +12,6 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This contains XS performance enhancers for Class::C3 version 0.16 and higher.
