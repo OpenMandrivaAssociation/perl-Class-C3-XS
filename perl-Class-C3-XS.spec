@@ -1,18 +1,18 @@
-%define module	Class-C3-XS
-%define name	perl-%{module}
-%define version	0.11
-%define	release	%mkrel 1
+%define upstream_name	 Class-C3-XS
+%define upstream_version 0.11
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	XS speedups for Class::C3 
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+
 Buildrequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This contains XS performance enhancers for Class::C3 version 0.16 and higher.
@@ -28,7 +28,7 @@ older than 0.16. (It's not a dependency because it would be circular with the
 optional dep from that package to this one).
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -50,4 +50,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Class
 %{perl_vendorarch}/auto/Class
 %{_mandir}/*/*
-
