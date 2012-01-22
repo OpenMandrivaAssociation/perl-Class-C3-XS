@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    %mkrel 5
 
 Summary:	XS speedups for Class::C3 
 License:	GPL+ or Artistic
