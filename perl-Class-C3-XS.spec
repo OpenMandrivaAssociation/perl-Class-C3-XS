@@ -50,3 +50,53 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Class
 %{perl_vendorarch}/auto/Class
 %{_mandir}/*/*
+
+
+%changelog
+* Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.130.0-5mdv2012.0
++ Revision: 765083
+- rebuilt for perl-5.14.2
+
+* Sat Jan 21 2012 Oden Eriksson <oeriksson@mandriva.com> 0.130.0-4
++ Revision: 763526
+- rebuilt for perl-5.14.x
+
+* Sat May 21 2011 Oden Eriksson <oeriksson@mandriva.com> 0.130.0-3
++ Revision: 676909
+- rebuild
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 0.130.0-2mdv2011.0
++ Revision: 555226
+- rebuild
+
+* Fri Sep 25 2009 Jérôme Quelin <jquelin@mandriva.org> 0.130.0-1mdv2010.0
++ Revision: 448607
+- update to 0.13
+
+* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.110.0-1mdv2010.0
++ Revision: 403005
+- rebuild using %%perl_convert_version
+
+* Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.11-1mdv2010.0
++ Revision: 370032
+- update to new version 0.11
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.08-4mdv2009.0
++ Revision: 255893
+- rebuild
+
+* Mon Jan 14 2008 Thierry Vignaud <tv@mandriva.org> 0.08-2mdv2008.1
++ Revision: 151854
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Wed Jul 04 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2008.0
++ Revision: 48053
+- import perl-Class-C3-XS
+
+
+* Wed Jul 04 2007 Guillaume Rousse <guillomovitch@mandriva.org> 0.08-1mdv2008.0
+- initial mdv release
