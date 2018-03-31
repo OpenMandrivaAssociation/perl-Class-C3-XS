@@ -1,10 +1,10 @@
 %define upstream_name	 Class-C3-XS
-%define upstream_version 0.13
+%define upstream_version 0.14
 
 Summary:	XS speedups for Class::C3 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	16
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
@@ -38,8 +38,7 @@ optional dep from that package to this one).
 %makeinstall_std
 
 %files
-%doc ChangeLog README
+%doc README
 %{perl_vendorarch}/Class
 %{perl_vendorarch}/auto/Class
 %{_mandir}/man3/*
-
