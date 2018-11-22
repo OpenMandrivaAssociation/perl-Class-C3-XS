@@ -4,10 +4,10 @@
 Summary:	XS speedups for Class::C3 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		http://metacpan.org/pod/Class::C3::XS
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 Buildrequires:	perl(Test::More)
 Buildrequires:	perl-devel
