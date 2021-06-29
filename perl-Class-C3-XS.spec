@@ -1,10 +1,10 @@
 %define upstream_name	 Class-C3-XS
-%define upstream_version 0.14
+%define upstream_version 0.15
 
 Summary:	XS speedups for Class::C3 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Class::C3::XS
@@ -26,7 +26,7 @@ older than 0.16. (It's not a dependency because it would be circular with the
 optional dep from that package to this one).
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
