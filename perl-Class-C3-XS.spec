@@ -1,10 +1,14 @@
 %define upstream_name	 Class-C3-XS
 %define upstream_version 0.15
+%ifarch %{x86_64}
+# FIXME bug
+%global _debugsource_template %{nil}
+%endif
 
 Summary:	XS speedups for Class::C3 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Class::C3::XS
