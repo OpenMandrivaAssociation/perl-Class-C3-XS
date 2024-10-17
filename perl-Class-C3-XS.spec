@@ -11,7 +11,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Class::C3::XS
+Url:		https://metacpan.org/pod/Class::C3::XS
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 Buildrequires:	perl(Test::More)
 Buildrequires:	perl-devel
