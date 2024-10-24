@@ -1,18 +1,13 @@
 %define upstream_name	 Class-C3-XS
-%define upstream_version 0.15
-%ifarch %{x86_64}
-# FIXME bug
-%global _debugsource_template %{nil}
-%endif
 
 Summary:	XS speedups for Class::C3 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.15
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Class::C3::XS
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{version}.tar.gz
 Buildrequires:	perl(Test::More)
 Buildrequires:	perl-devel
 
@@ -30,17 +25,17 @@ older than 0.16. (It's not a dependency because it would be circular with the
 optional dep from that package to this one).
 
 %prep
-%autosetup -p1 -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+%make_build CFLAGS="%{optflags}"
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README
